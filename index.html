@@ -2,13 +2,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
-     <meta name="robots" content="index, follow">
+     <meta name="robots" content="noindex"/>
      <link rel="shortcut icon" href="data:" />
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
      <!-- Título da Página -->
      <title>Protocolo Removendo Varizes</title>
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,8 +129,8 @@ padding: 1.5vh 1.5vw 1.5vh 1.5vw;
 <div class="description-EeMAtJ0379401">
 <style>
 
-.description-EeMAtJ0379401-element h3 {
-font-size: 1.32vw;
+.description-EeMAtJ0379401-element {
+font-size: 1.22vw;
 text-align: center;
 padding-top: 1vh;
 padding-bottom: 1vh;
@@ -137,23 +139,38 @@ line-height: 1.1;
 font-weight: 500;
 }
 @media (max-width: 1200px) {
-.description-EeMAtJ0379401-element h3 {
+.description-EeMAtJ0379401-element {
 font-size: 2.20vw;
 padding-top: 0.75vh;
 padding-bottom: 0.75vh;
 }
 }
 @media (max-width: 640px) {
-.description-EeMAtJ0379401-element h3 {
+.description-EeMAtJ0379401-element {
 font-size: 4.00vw;
 text-align: center;
 }
 }
 </style>
 <div class="description-EeMAtJ0379401-element ">
-<h3>
-Dia&nbsp;<span class="sm">01/10/2022</span>&nbsp;é o último dia para ver o conteúdo dessa página
-</h3>
+<div id="viewers">
+   <center><span style="color: #ff0000;"></span> <b>mulheres estão vendo esse vídeo. Devido a alta demanda de acessos, garantimos a apresentação <span style="color: #ff0000;">somente hoje!</b></center>
+</div>
+<p><script>
+  document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
+  setInterval(() => {
+    updatesUsersView();
+  }, 2500);
+  function getUsersView() {
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
+  }
+  function updatesUsersView() {
+    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
+    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
+  }
+</script></p>
 </div>
 </div>
 </div>
